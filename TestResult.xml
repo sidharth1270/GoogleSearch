@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="2" result="Failed" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="2" engine-version="3.8.0.0" clr-version="4.0.30319.42000" start-time="2018-08-06 07:03:01Z" end-time="2018-08-06 07:03:41Z" duration="40.210782">
+  <command-line><![CDATA[packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe  GoogleSearch\bin\debug\GoogleSearch.dll --out=TestResult.txt --result="TestResult.xml" ]]></command-line>
+  <test-suite type="Assembly" id="0-1003" name="GoogleSearch.dll" fullname="C:\Users\user\source\repos\GoogleSearch\GoogleSearch\bin\debug\GoogleSearch.dll" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2018-08-06 07:03:04Z" end-time="2018-08-06 07:03:41Z" duration="37.556817" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <environment framework-version="3.10.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.3.9600" platform="Win32NT" cwd="C:\Users\user\source\repos\GoogleSearch" machine-name="DELL" user="user" user-domain="dell" culture="en-IN" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\user\source\repos\GoogleSearch" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="3168" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1004" name="GoogleSearch" fullname="GoogleSearch" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2018-08-06 07:03:04Z" end-time="2018-08-06 07:03:41Z" duration="37.451207" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="0-1005" name="Stories" fullname="GoogleSearch.Stories" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2018-08-06 07:03:04Z" end-time="2018-08-06 07:03:41Z" duration="37.448695" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="0-1000" name="AvivaGoogleSearchFeature" fullname="GoogleSearch.Stories.AvivaGoogleSearchFeature" classname="GoogleSearch.Stories.AvivaGoogleSearchFeature" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2018-08-06 07:03:04Z" end-time="2018-08-06 07:03:41Z" duration="37.426366" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+          <properties>
+            <property name="Description" value="Aviva Google search" />
+            <property name="Category" value="GoogleSearch" />
+          </properties>
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <output><![CDATA[-> Using app.config
+]]></output>
+          <test-case id="0-1002" name="SearchFor10ThLinkText" fullname="GoogleSearch.Stories.AvivaGoogleSearchFeature.SearchFor10ThLinkText" methodname="SearchFor10ThLinkText" classname="GoogleSearch.Stories.AvivaGoogleSearchFeature" runstate="Runnable" seed="669699562" result="Failed" start-time="2018-08-06 07:03:05Z" end-time="2018-08-06 07:03:25Z" duration="19.103844" asserts="1">
+            <properties>
+              <property name="Description" value="Search for 10th  link text" />
+              <property name="Category" value="negative" />
+            </properties>
+            <failure>
+              <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+              <stack-trace><![CDATA[   at GoogleSearch.Test.Steps.GoogleSearchSteps.ThenIShouldSeeLinksMainPopulatedInTheSearchPage(Int32 expectedLinks) in C:\Users\user\source\repos\GoogleSearch\GoogleSearch\Steps\GoogleSearchSteps.cs:line 39
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at GoogleSearch.Stories.AvivaGoogleSearchFeature.ScenarioCleanup()
+   at GoogleSearch.Stories.AvivaGoogleSearchFeature.SearchFor10ThLinkText() in C:\Users\user\source\repos\GoogleSearch\GoogleSearch\Stories\GoogleSearch.feature:line 21
+]]></stack-trace>
+            </failure>
+            <output><![CDATA[Given I am on Google homepage
+-> done: GoogleSearchSteps.GivenIAmOnGoogleHomepage() (4.1s)
+When I enter 'Aviva' for search
+-> done: GoogleSearchSteps.WhenIEnterForSearch("Aviva") (0.7s)
+And I perform search
+-> done: GoogleSearchSteps.WhenIPerformSearch() (4.0s)
+Then I should see 10 main links populated in the search page
+Number of links present :7
+-> error:   Expected: True
+  But was:  False
+
+]]></output>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[   at GoogleSearch.Test.Steps.GoogleSearchSteps.ThenIShouldSeeLinksMainPopulatedInTheSearchPage(Int32 expectedLinks) in C:\Users\user\source\repos\GoogleSearch\GoogleSearch\Steps\GoogleSearchSteps.cs:line 39
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+          <test-case id="0-1001" name="SearchForTextInGoogle" fullname="GoogleSearch.Stories.AvivaGoogleSearchFeature.SearchForTextInGoogle" methodname="SearchForTextInGoogle" classname="GoogleSearch.Stories.AvivaGoogleSearchFeature" runstate="Runnable" seed="892640048" result="Passed" start-time="2018-08-06 07:03:25Z" end-time="2018-08-06 07:03:41Z" duration="16.560333" asserts="1">
+            <properties>
+              <property name="Description" value="Search for text in Google" />
+              <property name="Category" value="positive" />
+            </properties>
+            <output><![CDATA[Given I am on Google homepage
+-> done: GoogleSearchSteps.GivenIAmOnGoogleHomepage() (4.4s)
+When I enter 'Aviva' for search
+-> done: GoogleSearchSteps.WhenIEnterForSearch("Aviva") (0.8s)
+And I perform search
+-> done: GoogleSearchSteps.WhenIPerformSearch() (4.2s)
+Then I should see and print the link text at 5th position
+Aviva Life Insurance in M.G. Road, Bangalore-560001 | Sulekha ...
+-> done: GoogleSearchSteps.ThenIShouldSeeAndPrintTheLinkTextAtThPosition(5) (0.2s)
+And I should see 7 main links populated in the search page
+Number of links present :7
+-> done: GoogleSearchSteps.ThenIShouldSeeLinksMainPopulatedInTheSearchPage(7) (0.0s)
+]]></output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

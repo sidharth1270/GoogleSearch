@@ -1,0 +1,27 @@
+=> GoogleSearch.Stories.AvivaGoogleSearchFeature.SearchFor10ThLinkText
+Given I am on Google homepage
+-> done: GoogleSearchSteps.GivenIAmOnGoogleHomepage() (4.1s)
+When I enter 'Aviva' for search
+-> done: GoogleSearchSteps.WhenIEnterForSearch("Aviva") (0.7s)
+And I perform search
+-> done: GoogleSearchSteps.WhenIPerformSearch() (4.0s)
+Then I should see 10 main links populated in the search page
+Number of links present :7
+-> error:   Expected: True
+  But was:  False
+
+=> GoogleSearch.Stories.AvivaGoogleSearchFeature.SearchForTextInGoogle
+Given I am on Google homepage
+-> done: GoogleSearchSteps.GivenIAmOnGoogleHomepage() (4.4s)
+When I enter 'Aviva' for search
+-> done: GoogleSearchSteps.WhenIEnterForSearch("Aviva") (0.8s)
+And I perform search
+-> done: GoogleSearchSteps.WhenIPerformSearch() (4.2s)
+Then I should see and print the link text at 5th position
+Aviva Life Insurance in M.G. Road, Bangalore-560001 | Sulekha ...
+-> done: GoogleSearchSteps.ThenIShouldSeeAndPrintTheLinkTextAtThPosition(5) (0.2s)
+And I should see 7 main links populated in the search page
+Number of links present :7
+-> done: GoogleSearchSteps.ThenIShouldSeeLinksMainPopulatedInTheSearchPage(7) (0.0s)
+=> GoogleSearch.Stories.AvivaGoogleSearchFeature
+-> Using app.config
